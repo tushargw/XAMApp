@@ -35,6 +35,9 @@
     <Compile Update="AppShell.xaml.cs">
       <DependentUpon>%(Filename)</DependentUpon>
     </Compile>
+    <Compile Update="StackLayoutPage2.xaml.cs">
+      <DependentUpon>StackLayoutPage2.xaml</DependentUpon>
+    </Compile>
     <Compile Update="StackLayoutPage1.xaml.cs">
       <DependentUpon>StackLayoutPage1.xaml</DependentUpon>
     </Compile>

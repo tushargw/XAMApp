@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XAMApp.StackLayoutPage2"
+						 >
+	<ContentPage.Content>
+		<StackLayout>
+			<Label Text="nyc_photographer" Padding="20" FontAttributes="Bold" />
+			<Image Source="https://images.lifestyleasia.com/wp-content/uploads/sites/7/2022/01/24122051/kaziranga.jpeg?tr=w-1600" ></Image>
+			<StackLayout Orientation="Horizontal">
+				<Button Text="Like" BackgroundColor="Transparent" TextColor="#00aaff"></Button>
+				<Button Text="Comment" BackgroundColor="Transparent" TextColor="#00aaff"></Button>
+				<Button Text="Share" BackgroundColor="Transparent" TextColor="#00aaff"></Button>
+			</StackLayout>
+			<StackLayout Padding="20">
+				<BoxView Color="#f0f0f0" HeightRequest="1"></BoxView>
+				<Label Text="700 Likes" FontSize="Large" TextColor="#000000"></Label>
+				<Label Text="Thriving wildlife on display! Visit these national parks in Northeast India"></Label>
+			</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
