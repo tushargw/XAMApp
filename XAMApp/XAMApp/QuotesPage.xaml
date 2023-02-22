@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XAMApp.QuotesPage">
+	<ContentPage.Padding>
+		<OnPlatform x:TypeArguments="Thickness" Android="20,30,20,20" iOS="20,40,20,20"></OnPlatform>
+	</ContentPage.Padding>
+	<ContentPage.Content>
+		<StackLayout>
+			<StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+				<Button Text="Previous" Clicked="Previous_Clicked"></Button>
+				<Button Text="Next" Clicked="Next_Clicked"></Button>
+			</StackLayout>
+			<StackLayout Orientation="Horizontal">
+				<Label Text="Font Size:"/>
+				<Label Text="{Binding Value}" BindingContext="{x:Reference slider}"/>
+			</StackLayout>
+			<Slider Maximum="60" Minimum="16" MinimumTrackColor="Green" MaximumTrackColor="LightGreen" ValueChanged="slider_ValueChanged" x:Name="slider"></Slider>
+			<Label x:Name="quoteLabel"></Label>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
