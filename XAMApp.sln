@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XAMApp.Android", "XAMApp\XA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XAMApp.iOS", "XAMApp\XAMApp.iOS\XAMApp.iOS.csproj", "{045C2DAD-6E0D-4789-B8CB-14AAB5BD62D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XAMApp", "XAMApp\XAMApp\XAMApp.csproj", "{206068A6-7456-47FE-B2E9-A869E656BF1D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XAMApp", "XAMApp\XAMApp\XAMApp.csproj", "{206068A6-7456-47FE-B2E9-A869E656BF1D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

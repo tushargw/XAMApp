@@ -1,4 +1,5 @@
 ﻿using System;
+using XAMApp.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,8 @@ namespace XAMApp
 		{
 			InitializeComponent();
 
-			MainPage = new QuotesPage();
+			DependencyService.Register<MockDataStore>();
+			MainPage = new AppShell();
 		}
 
 		protected override void OnStart()
