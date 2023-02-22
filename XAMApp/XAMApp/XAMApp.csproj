@@ -22,6 +22,9 @@
     <EmbeddedResource Update="QuotesPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="StackLayoutPage1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
@@ -31,6 +34,9 @@
   <ItemGroup>
     <Compile Update="AppShell.xaml.cs">
       <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
+    <Compile Update="StackLayoutPage1.xaml.cs">
+      <DependentUpon>StackLayoutPage1.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\AboutPage.xaml.cs">
       <DependentUpon>%(Filename)</DependentUpon>
