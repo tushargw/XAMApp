@@ -37,9 +37,24 @@
 			</Picker>
 
 			<StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" >
-				<DatePicker Date="{x:Static sys:DateTime.Today}" Format="d MM yyyy"></DatePicker>
-				<TimePicker Time="13:00"></TimePicker>
+				<TableView Intent="Form">
+					<TableRoot>
+						<TableSection>
+							<TextCell Text="Name" Detail="Rana"></TextCell>
+							<EntryCell Label="Title" Placeholder="Online Shoping.."></EntryCell>
+							<SwitchCell Text="Notification" On="true"></SwitchCell>
+							<ViewCell>
+								<StackLayout Orientation="Horizontal" Padding="13,0">
+									<Label Text="Starts" VerticalOptions="Center"></Label>
+									<DatePicker Date="{x:Static sys:DateTime.Today}" Format="d MM yyyy" HorizontalOptions="EndAndExpand"></DatePicker>
+									<TimePicker Time="13:00"></TimePicker>
+								</StackLayout>
+							</ViewCell>
+						</TableSection>
+					</TableRoot>
+				</TableView>
 			</StackLayout>
+
 		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>
