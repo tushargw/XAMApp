@@ -22,6 +22,9 @@
     <EmbeddedResource Update="GridPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="ControlInfo.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="QuotesPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -40,6 +43,9 @@
     </Compile>
     <Compile Update="GridPage.xaml.cs">
       <DependentUpon>GridPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="ControlInfo.xaml.cs">
+      <DependentUpon>ControlInfo.xaml</DependentUpon>
     </Compile>
     <Compile Update="StackLayoutPage2.xaml.cs">
       <DependentUpon>StackLayoutPage2.xaml</DependentUpon>

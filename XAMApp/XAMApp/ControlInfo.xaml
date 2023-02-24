@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+						 xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             x:Class="XAMApp.ControlInfo">
+	<ContentPage.Content>
+		<StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" >
+			<StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" >
+				<Label Text="Welcome to Xamarin.Forms!" x:Name="label" />
+				<Switch IsToggled="True" Toggled="Switch_Toggled"></Switch>
+
+				<Switch IsToggled="True" x:Name="s1"></Switch>
+				<Label Text="Result" IsVisible="{Binding Source={x:Reference s1},Path=IsToggled}"></Label>
+			</StackLayout>
+
+			<StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" >
+				<Slider x:Name="silder1" Minimum="0" Maximum="255" HorizontalOptions="FillAndExpand"></Slider>
+				<Label Text="{Binding Source={x:Reference silder1},Path=Value, StringFormat='{0:N0}'}"></Label>
+
+				<Stepper x:Name="stepper1" Increment="1"></Stepper>
+				<Label Text="{Binding Source={x:Reference stepper1},Path=Value}"></Label>
+			</StackLayout>
+
+			<StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" >
+				<Entry IsPassword="True"></Entry>
+				<Entry Keyboard="Numeric"></Entry>
+				<Entry IsPassword="True" Keyboard="Numeric"></Entry>
+			</StackLayout>
+
+			<Editor BackgroundColor="Yellow" VerticalOptions="CenterAndExpand" HeightRequest="50"></Editor>
+
+			<Picker x:Name="ContactsMethod" Title="Contact Info" SelectedIndex="0" SelectedIndexChanged="ContactsMethod_SelectedIndexChanged_1">
+				<Picker.Items>
+					<x:String>Email</x:String>
+					<x:String>SMS</x:String>
+				</Picker.Items>
+			</Picker>
+
+			<StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" >
+				<DatePicker Date="{x:Static sys:DateTime.Today}" Format="d MM yyyy"></DatePicker>
+				<TimePicker Time="13:00"></TimePicker>
+			</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
