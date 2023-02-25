@@ -12,14 +12,25 @@ namespace XAMApp.Navigation
 			InitializeComponent();
 		}
 
-		private void Button_Clicked(object sender, EventArgs e)
+		private void Login_Clicked(object sender, EventArgs e)
 		{
 			if (Username.Text == "admin" && Password.Text == "admin")
 			{
-				DisplayAlert("Success !!", "You have logged in successfully.", "Ok");
+				Navigation.PushAsync(new ControlInfo());
 				return;
 			}
+
 			DisplayAlert("Failure !!", "Username or password is incorrect.", "Retry");
+		}
+
+		private void Register_Clicked(object sender, EventArgs e)
+		{
+			Navigation.PushAsync(new RegisterPage());
+		}
+
+		private void ForgotPassword_Clicked(object sender, EventArgs e)
+		{
+			Navigation.PushAsync(new ForgotPasswordPage());
 		}
 	}
 }

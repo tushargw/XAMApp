@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XAMApp.Navigation.RegisterPage">
+	<ContentPage.Content>
+		<StackLayout>
+			<Label Text="Register" FontSize="Title"/>
+			<StackLayout Orientation="Horizontal">
+				<Label Text="Firstname" VerticalOptions="Center"></Label>
+				<Entry x:Name="Firstname" VerticalOptions="Center" HorizontalOptions="FillAndExpand"></Entry>
+			</StackLayout>
+			<StackLayout Orientation="Horizontal">
+				<Label Text="Lastname" VerticalOptions="Center"></Label>
+				<Entry x:Name="Lastname" VerticalOptions="Center" HorizontalOptions="FillAndExpand"></Entry>
+			</StackLayout>
+			<StackLayout Orientation="Horizontal">
+				<Label Text="Email" VerticalOptions="Center"></Label>
+				<Entry x:Name="Email" Keyboard="Email" VerticalOptions="Center" HorizontalOptions="FillAndExpand"></Entry>
+			</StackLayout>
+			<StackLayout Orientation="Horizontal">
+				<Label Text="Phone" VerticalOptions="Center"></Label>
+				<Entry x:Name="Phone" Keyboard="Telephone" VerticalOptions="Center" HorizontalOptions="FillAndExpand"></Entry>
+			</StackLayout>
+			<Button Text="Save" Clicked="Save_Clicked"></Button>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

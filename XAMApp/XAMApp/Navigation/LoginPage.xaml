@@ -13,7 +13,11 @@
 				<Label Text="Password" VerticalOptions="Center"></Label>
 				<Entry IsPassword="True" x:Name="Password" VerticalOptions="Center" HorizontalOptions="FillAndExpand"></Entry>
 			</StackLayout>
-			<Button Text="Login" Clicked="Button_Clicked"></Button>
+			<Button Text="Login" Clicked="Login_Clicked"></Button>
+			<StackLayout Orientation="Horizontal">
+				<Button Text="Register" Clicked="Register_Clicked" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" TextColor="Blue"></Button>
+				<Button Text="Forgot Password" Clicked="ForgotPassword_Clicked" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" TextColor="Blue"></Button>
+			</StackLayout>
 		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>
