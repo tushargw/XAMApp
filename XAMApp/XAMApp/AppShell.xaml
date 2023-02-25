@@ -2,6 +2,7 @@
 <Shell xmlns="http://xamarin.com/schemas/2014/forms" 
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:training="clr-namespace:XAMApp"
+       xmlns:navTraining="clr-namespace:XAMApp.Navigation"
        xmlns:sample="clr-namespace:XAMApp.Views"
        Title="Xamarin Training App"
        x:Class="XAMApp.AppShell">
@@ -84,6 +85,9 @@
 	</FlyoutItem>
 	<FlyoutItem Title="Controls Hands On" Icon="icon_feed.png">
 		<ShellContent Route="ControlInfo" ContentTemplate="{DataTemplate training:ControlInfo}" />
+	</FlyoutItem>
+	<FlyoutItem Title="Navigation" Icon="icon_feed.png">
+		<ShellContent Route="Login" ContentTemplate="{DataTemplate navTraining:LoginPage}" />
 	</FlyoutItem>
 	<FlyoutItem Title="Grid Page" Icon="icon_feed.png">
 		<ShellContent Route="GridPage" ContentTemplate="{DataTemplate training:GridPage}" />
