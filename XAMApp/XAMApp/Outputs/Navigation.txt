@@ -1,0 +1,10 @@
+1. Create user login Form
+with UserName and Password 
+
+if login is not then user should click 
+the resgistration link below and navigate registration page. if login successfull then it navigate to home page.  Registeration FirstName
+LastName
+Email
+Phone Number after fill up all the from details click on Save button 
+and you get confirmation alert weather want to save yes or no. then it navigate login page...  Forgot Password Email Textbox if enter email then in alert it said password retrive successfully.
+back to login page
