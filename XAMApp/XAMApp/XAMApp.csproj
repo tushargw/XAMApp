@@ -59,6 +59,9 @@
     <Compile Update="ControlInfo.xaml.cs">
       <DependentUpon>ControlInfo.xaml</DependentUpon>
     </Compile>
+    <Compile Update="MVVMCalculatorPage.xaml.cs">
+      <DependentUpon>MVVMCalculatorPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Navigation\RegisterPage.xaml.cs">
       <DependentUpon>RegisterPage.xaml</DependentUpon>
     </Compile>

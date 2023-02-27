@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+						 xmlns:vm="clr-namespace:XAMApp.ViewModels"
+             x:Class="XAMApp.MVVMCalculatorPage"
+						 Title="MVVM Calculator Page"
+						 Padding="40">
+	<Grid>
+		<Entry Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Placeholder="Enter first number" Keyboard="Numeric" Text="{Binding FirstNumber, Mode=TwoWay}"></Entry>
+		<Entry Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" Placeholder="Enter Second number" Keyboard="Numeric" Text="{Binding SecondNumber, Mode=TwoWay}"></Entry>
+		<Button Grid.Row="2" Grid.Column="0" Text="Add" Command="{Binding AddCommand}"></Button>
+		<Button Grid.Row="2" Grid.Column="1" Text="Sub" Command="{Binding SubCommand}"></Button>
+		<Button Grid.Row="2" Grid.Column="2" Text="Mul" Command="{Binding MulCommand}"></Button>
+		<Button Grid.Row="2" Grid.Column="3" Text="Div" Command="{Binding DivCommand}"></Button>
+		<Label Text="{Binding Result, StringFormat='{0:N2}'}" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" FontSize="Large" HorizontalTextAlignment="Center"></Label>
+	</Grid>
+</ContentPage>
