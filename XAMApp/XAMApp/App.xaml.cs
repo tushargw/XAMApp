@@ -12,7 +12,7 @@ namespace XAMApp
 			InitializeComponent();
 
 			DependencyService.Register<MockDataStore>();
-			MainPage = new AppShell();
+			MainPage = new WebViewPage(); // AppShell();
 		}
 
 		protected override void OnStart()
