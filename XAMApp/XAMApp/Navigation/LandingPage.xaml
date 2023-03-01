@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XAMApp.Navigation.LandingPage">
+	<StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+		<Label Text="Welcome !" />
+		<Label x:Name="label1" />
+		<Button Text="Logout" Clicked="Logout_Clicked"></Button>
+	</StackLayout>
+</ContentPage>

@@ -14,9 +14,10 @@ namespace XAMApp.Navigation
 
 		private void Login_Clicked(object sender, EventArgs e)
 		{
-			if (Username.Text == "admin" && Password.Text == "admin")
+			if (Password.Text == "admin")
 			{
-				Navigation.PushAsync(new ControlInfo());
+				App.Current.Properties["Username"] = Username.Text;
+				Navigation.PushAsync(new LandingPage());
 				return;
 			}
 
