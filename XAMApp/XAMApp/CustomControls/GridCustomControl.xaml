@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Grid xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XAMApp.CustomControls.GridCustomControl">
+	<Grid>
+		<Label x:Name="Title" FontSize="Title" Grid.Row="0" Grid.Column="0"></Label>
+		<Label x:Name="Description" Grid.Row="0" Grid.Column="1"></Label>
+	</Grid>
+</Grid>

@@ -1,0 +1,5 @@
+﻿Assignment on Custom Control you have create one UI which contains Enter Title : Entry elements
+Enter Description : Editor elements Button caption like "Post" Display Title and Description 
+in your Custom bindabale propery..
+
+Bindable control is a single object, not list.
