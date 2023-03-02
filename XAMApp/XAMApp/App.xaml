@@ -8,6 +8,20 @@
 	<Application.Resources>
 		<ResourceDictionary>
 			<Color x:Key="Primary">#2196F3</Color>
+
+			<Color x:Key="buttonBackGroundColor">Gray</Color>
+			<x:Int32 x:Key="buttonRadius">20</x:Int32>
+			<Style x:Key="GoodButton" TargetType="Button">
+				<Setter Property="BackgroundColor" Value="Gray"></Setter>
+				<Setter Property="TextColor" Value="White"></Setter>
+				<Setter Property="CornerRadius" Value="20"></Setter>
+				<Setter Property="FontAttributes" Value="Bold"></Setter>
+			</Style>
+			<Style x:Key="DisabledButton" TargetType="Button" BasedOn="{StaticResource GoodButton}">
+				<Setter Property="BackgroundColor" Value="#cdcdcd"></Setter>
+				<Setter Property="IsEnabled" Value="False"></Setter>
+			</Style>
+
 			<Style TargetType="Button">
 				<Setter Property="TextColor" Value="White"></Setter>
 				<Setter Property="VisualStateManager.VisualStateGroups">

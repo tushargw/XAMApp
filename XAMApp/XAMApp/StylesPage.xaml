@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XAMApp.StylesPage"
+						 Padding="40">
+	<!--<ContentPage.Resources>
+		<ResourceDictionary>
+			<Color x:Key="buttonBackGroundColor">Red</Color>
+		</ResourceDictionary>
+	</ContentPage.Resources>-->
+	<ContentPage.Content>
+		<StackLayout Spacing="20" VerticalOptions="Center">
+			<Button Text="Register"
+BackgroundColor="{DynamicResource buttonBackGroundColor}"
+TextColor="White"
+							CornerRadius="{StaticResource buttonRadius}"
+FontAttributes="Bold"></Button>
+			<Button Text="Color Changing button"  Clicked="Button_Clicked_1"
+BackgroundColor="{DynamicResource buttonBackGroundColor}"
+TextColor="White"
+							CornerRadius="{StaticResource buttonRadius}"
+FontAttributes="Bold"></Button>
+			<Button Text="Good Button" Style="{StaticResource GoodButton}"></Button>
+			<Button Text="Click to toggle button" Style="{StaticResource GoodButton}" Clicked="Button_Clicked"></Button>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
