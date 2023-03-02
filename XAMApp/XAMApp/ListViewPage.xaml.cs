@@ -30,9 +30,23 @@ namespace XAMApp
  "Ritu" };
 			listViewDefault.ItemsSource = names;
 
-			listView.ItemsSource = new List<Contact>
- { new Contact{Name="Rana",Email="rana@gmai.com"},
- new Contact{Name="Tushar",Email="tishar@gmai.com"}, };
+			listView.ItemsSource = GetContacts();
+		}
+
+		private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
+		{
+			listView.ItemsSource = GetContacts(e.NewTextValue);
+		}
+
+		private IEnumerable<Contact> GetContacts(string searchText = null)
+		{
+			var contacs = new List<Contact>() {
+ new Contact{Name="Rana",Email="rana@gmai.com"},
+ new Contact{Name="Tushar",Email="tishar@gmai.com"},
+ };
+			if (string.IsNullOrWhiteSpace(searchText))
+				return contacs;
+			return contacs.Where(x => (x.Name + x.Email).ToLower().Contains(searchText.ToLower()));
 		}
 	}
 }
