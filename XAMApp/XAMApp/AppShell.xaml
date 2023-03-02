@@ -80,6 +80,9 @@
         FlyoutDisplayOptions="AsMultipleItems" will create a separate flyout item for each child element    
         https://docs.microsoft.com/dotnet/api/xamarin.forms.shellgroupitem.flyoutdisplayoptions?view=xamarin-forms
     -->
+	<FlyoutItem Title="List View Page" Icon="icon_feed.png">
+		<ShellContent Route="ListViewPage" ContentTemplate="{DataTemplate training:ListViewPage}" />
+	</FlyoutItem>
 	<FlyoutItem Title="Custom Control Page" Icon="icon_feed.png">
 		<ShellContent Route="CustomControlPage" ContentTemplate="{DataTemplate training:CustomControlPage}" />
 	</FlyoutItem>
