@@ -8,8 +8,8 @@
 			<ListView x:Name="listViewDefault"></ListView>
 
 			<SearchBar Placeholder="Search..." TextChanged="SearchBar_TextChanged"></SearchBar>
-			
-			<ListView x:Name="listView">
+
+			<ListView x:Name="listView" ItemSelected="listView_ItemSelected">
 				<ListView.ItemTemplate>
 					<DataTemplate>
 						<TextCell Text="{Binding Name}" Detail="{Binding Email}"></TextCell>

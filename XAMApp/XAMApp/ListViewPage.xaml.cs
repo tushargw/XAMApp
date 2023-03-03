@@ -48,5 +48,11 @@ namespace XAMApp
 				return contacs;
 			return contacs.Where(x => (x.Name + x.Email).ToLower().Contains(searchText.ToLower()));
 		}
+
+		private async void listView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+		{
+			var contacts = e.SelectedItem as Contact;
+			await Navigation.PushAsync(new ContactsDetailPage(contacts));
+		}
 	}
 }
