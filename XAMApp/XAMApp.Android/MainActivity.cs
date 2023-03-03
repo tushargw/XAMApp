@@ -15,9 +15,10 @@ namespace XAMApp.Droid
 
 		readonly string[] LocationPermissions =
 		{
-	Manifest.Permission.AccessCoarseLocation,
-	Manifest.Permission.AccessFineLocation
-};
+			Manifest.Permission.AccessCoarseLocation,
+			Manifest.Permission.AccessFineLocation
+		};
+
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);

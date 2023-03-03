@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
+using Xamarin.Forms.Maps;
 using Xamarin.Forms.Xaml;
 
 /*
@@ -23,12 +25,42 @@ using Xamarin.Forms.Xaml;
 
 namespace XAMApp
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
+	//[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class FormsMapPage : ContentPage
 	{
+		CancellationTokenSource cts;
+
 		public FormsMapPage()
 		{
 			InitializeComponent();
+
+			Location location;
+
+			//try
+			//{
+			//	var request = new GeolocationRequest(GeolocationAccuracy.Medium, TimeSpan.FromSeconds(10));
+			//	cts = new CancellationTokenSource();
+			//	location = Geolocation.GetLocationAsync(request, cts.Token).GetAwaiter().GetResult();
+			//}
+			//catch (Exception ex)
+			//{
+				location = Geolocation.GetLastKnownLocationAsync().GetAwaiter().GetResult();
+			//}
+
+			if (location != null)
+			{
+				var position = new Position(location.Latitude, location.Longitude);
+				var mapSpan = new MapSpan(position, 0.01, 0.01);
+				map.MoveToRegion(mapSpan);
+			}
+		}
+
+		protected override void OnDisappearing()
+		{
+			if (cts != null && !cts.IsCancellationRequested)
+				cts.Cancel();
+
+			base.OnDisappearing();
 		}
 	}
 }
