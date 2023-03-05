@@ -5,37 +5,6 @@ using XAMApp.AdminModule.Models;
 
 namespace XAMApp.AdminModule.Models
 {
-	public class Entity
-	{
-		public Entity()
-		{
-			CreatedAt = ModifiedAt = DateTime.UtcNow;
-		}
-
-		public string DisplayName { get; set; }
-
-		[PrimaryKey]
-		public long Id { get; set; }
-
-		public DateTime ModifiedAt { get; set; }
-		public long ModifiedBy { get; set; }
-		public DateTime CreatedAt { get; set; }
-		public long CreatedBy { get; set; }
-		public bool IsDeleted { get; set; }
-
-		public override string ToString() => DisplayName;
-	}
-
-	public class User : Entity
-	{
-		public string Name { get; set; }
-		public string Password { get; set; }
-		public string Email { get; set; }
-		public string UserName { get; set; }
-		public string Address { get; set; }
-		public bool IsAdmin { get; set; }
-	}
-
 	public class Restaurant : Entity
 	{
 		public string Address { get; set; }
