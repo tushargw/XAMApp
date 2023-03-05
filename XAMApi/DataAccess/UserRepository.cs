@@ -12,7 +12,7 @@ namespace XAMApi.DataAccess
 		public User? Get(string username, string encryptedPassword)
 		{
 			//Ado.net Data Access 
-			var users = GetDataReader("Select [Id],[DisplayName],[Username], Password, [Email],[Address],[IsAdmin],[CreatedAt],[CreatedBy],[ModifiedAt],[ModifiedBy],[IsDeleted] from Users");
+			var users = GetDataReader("Select [Id],[DisplayName],[Username], Password, [Email],[Address],[IsAdmin],[CreatedAt],[CreatedBy],[ModifiedAt],[ModifiedBy],[IsDeleted] from Users where isDeleted = 0");
 
 			// I could have used this, but thought of keeping this simple. More like LINQ
 			////	SqlCommand cmd = new SqlCommand(inserSQL, con);

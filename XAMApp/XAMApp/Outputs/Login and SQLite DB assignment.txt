@@ -1,0 +1,5 @@
+﻿1. Login Navigation login validation should be check via
+Sqlite Login Uname and password
+uname admin password admin checking based on SQllite Db. 2. Registration page 
+you save and display registration information into
+SQLSlite Db. Navigation should be apply.

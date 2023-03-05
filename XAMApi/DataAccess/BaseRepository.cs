@@ -28,6 +28,21 @@ namespace XAMApi.DataAccess
 			return list;
 		}
 
+		protected int Add(string insertSql, Dictionary<string, object> parameters)
+		{
+			SqlConnection con = new SqlConnection(_connectionString);
+			con.Open();
+			SqlCommand cmd = new SqlCommand(insertSql, con);
+			cmd.CommandType = CommandType.Text;
+
+			foreach (var key in parameters.Keys)
+			{
+				cmd.Parameters.AddWithValue(key, parameters[key]);
+			}
+			int result = cmd.ExecuteNonQuery();
+			return result;
+		}
+
 		private static List<T> GetListFromReader(SqlDataReader dr)
 		{
 			PropertyInfo[] propertyInfos = typeof(T).GetProperties();
