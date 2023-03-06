@@ -62,5 +62,12 @@ namespace XAMApi.DataAccess
 			if (rowCountAffected == 0)
 				throw new InvalidOperationException($"No record was deleted.");
 		}
+
+		public Restaurant? Get(long id)
+		{
+			var restaurants = Get();
+			var restaurant = restaurants?.FirstOrDefault(r => r.Id == id);
+			return restaurant;
+		}
 	}
 }

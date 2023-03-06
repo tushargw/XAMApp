@@ -29,6 +29,16 @@ namespace XAMApi.Controllers
 			return restaurants;
 		}
 
+		[HttpGet("{id:long}")]
+		public Restaurant Get(long id)
+		{
+			var restaurant = _restaurantService.Get(id);
+			if (restaurant == null)
+				Response.StatusCode = (int)HttpStatusCode.NotFound;
+			var hotel = _mapper.Map<Restaurant>(restaurant);
+			return hotel;
+		}
+
 		[HttpPost]
 		public Restaurant Add(Restaurant restaurant)
 		{
@@ -53,7 +63,6 @@ namespace XAMApi.Controllers
 			restaurant = _mapper.Map<Restaurant>(hotel);
 			return restaurant;
 		}
-
 
 		[HttpDelete("{id:long}")]
 		public void Delete(long id)

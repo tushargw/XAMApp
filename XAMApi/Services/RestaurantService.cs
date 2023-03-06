@@ -28,6 +28,11 @@ namespace XAMApi.Services
 			return _restaurantRepository.Get();
 		}
 
+		public Restaurant? Get(long id)
+		{
+			return _restaurantRepository.Get(id);
+		}
+
 		public Restaurant Update(Restaurant restaurant)
 		{
 			return _restaurantRepository.Update(restaurant);

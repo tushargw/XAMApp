@@ -8,5 +8,6 @@ namespace XAMApi.Services.Interfaces
 		Restaurant Add(Restaurant restaurant);
 		Restaurant Update(Restaurant hotel);
 		void Delete(long id);
+		Restaurant? Get(long id);
 	}
 }
