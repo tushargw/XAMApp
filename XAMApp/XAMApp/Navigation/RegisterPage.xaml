@@ -7,6 +7,14 @@
 		<StackLayout>
 			<Label Text="Register" FontSize="Title"/>
 			<StackLayout Orientation="Horizontal">
+				<Label Text="Username" VerticalOptions="Center"></Label>
+				<Entry x:Name="Username" VerticalOptions="Center" HorizontalOptions="FillAndExpand"></Entry>
+			</StackLayout>
+			<StackLayout Orientation="Horizontal">
+				<Label Text="Password" VerticalOptions="Center"></Label>
+				<Entry x:Name="Password" IsPassword="True" VerticalOptions="Center" HorizontalOptions="FillAndExpand"></Entry>
+			</StackLayout>
+			<StackLayout Orientation="Horizontal">
 				<Label Text="Firstname" VerticalOptions="Center"></Label>
 				<Entry x:Name="Firstname" VerticalOptions="Center" HorizontalOptions="FillAndExpand"></Entry>
 			</StackLayout>
