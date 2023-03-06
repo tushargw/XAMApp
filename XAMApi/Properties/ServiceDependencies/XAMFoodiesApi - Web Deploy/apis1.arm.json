@@ -4,7 +4,7 @@
   "parameters": {
     "resourceGroupName": {
       "type": "string",
-      "defaultValue": "RG_XAMApi",
+      "defaultValue": "RG_XAMTraining",
       "metadata": {
         "_parameterType": "resourceGroup",
         "description": "Name of the resource group for the resource. It is recommended to put resources under same resource group for better tracking."
@@ -49,17 +49,17 @@
           "contentVersion": "1.0.0.0",
           "resources": [
             {
-              "name": "XAMApiapi",
+              "name": "XAMFoodiesApi",
               "type": "Microsoft.ApiManagement/service",
               "location": "[parameters('resourceLocation')]",
               "properties": {
-                "publisherEmail": "tushargw-hd7@hotmail.com",
-                "publisherName": "Tushar G. Walavalkar",
+                "publisherEmail": "Tushar.W@WinWire.com",
+                "publisherName": "Tushar Walavalkar",
                 "notificationSenderEmail": "apimgmt-noreply@mail.windowsazure.com",
                 "hostnameConfigurations": [
                   {
                     "type": "Proxy",
-                    "hostName": "xamapiapi.azure-api.net",
+                    "hostName": "xamfoodiesapi.azure-api.net",
                     "encodedCertificate": null,
                     "keyVaultId": null,
                     "certificatePassword": null,
@@ -95,7 +95,7 @@
             },
             {
               "type": "Microsoft.ApiManagement/service/apis",
-              "name": "XAMApiapi/XAMApi",
+              "name": "XAMFoodiesApi/XAMApi",
               "properties": {
                 "displayName": "XAMApi",
                 "apiRevision": "1",
@@ -118,7 +118,7 @@
               },
               "apiVersion": "2019-12-01",
               "dependsOn": [
-                "XAMApiapi"
+                "XAMFoodiesApi"
               ]
             }
           ]
