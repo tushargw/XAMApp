@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<StackLayout xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XAMApp.CustomControls.StackCustomControl"
+						 Padding="40">
+	<Grid BackgroundColor="AliceBlue">
+		<Label Grid.Row="0" Grid.Column="0" Text="Title" />
+		<Entry Grid.Row="0" Grid.Column="1" Placeholder="Enter title" Text="{Binding Title}" />
+		<Label Grid.Row="1" Grid.Column="0" Text="Description" />
+		<Editor Grid.Row="1" Grid.Column="1" Placeholder="Enter description" HeightRequest="100" Text="{Binding Description}" />
+		<Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Text="Post" Clicked="Button_Clicked"></Button>
+		<Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" x:Name="Result" />
+	</Grid>
+</StackLayout>

@@ -6,6 +6,7 @@
 	<ContentPage.Content>
 		<StackLayout>
 			<customcontrols:GridCustomControl TitleText="Tushar" DescriptionText="{Binding MyDescription}"></customcontrols:GridCustomControl>
+			<customcontrols:StackCustomControl></customcontrols:StackCustomControl>
 		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>
