@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIApp.Binding"
+             Title="Binding">
+	<VerticalStackLayout>
+		<Entry
+                FontSize="50"
+                HorizontalOptions="Center"
+                Text="{Binding Name}"
+                VerticalOptions="Center" />
+		<Entry
+                FontSize="50"
+                HorizontalOptions="Center"
+                Text="{Binding Phone}"
+                VerticalOptions="Center" />
+		<Entry
+                FontSize="50"
+                HorizontalOptions="Center"
+                Text="{Binding Address}"
+                VerticalOptions="Center" />
+
+		<Button
+                x:Name="CounterBtn"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Center"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Text="Click me" />
+	</VerticalStackLayout>
+</ContentPage>
